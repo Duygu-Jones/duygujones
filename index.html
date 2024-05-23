@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Duygu Jones - Data Scientist</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+      /*-------- Commen Setting for all Pages ---Custom styles----------- */
+      .divider {
+        border-bottom: 1px solid #d3d2d2;
+        width: 50%;
+        margin: 20px auto;
+      }
+      .big-bold {
+        font-size: 2.9em;
+        font-weight: bold;
+      }
+
+      /* Custom styles */
+      .short-cover {
+        height: 200px;
+      }
+
+      .icon-brands-fa-tableau {
+        display: inline-block;
+        width: 24px !important; /* Ensuring this rule takes precedence */
+        height: 24px !important; /* Ensuring this rule takes precedence */
+        background: url("images/tableauIcon2.png") no-repeat center center;
+        background-size: contain;
+        vertical-align: middle;
+        transition: opacity 0.3s;
+      }
+
+      .icon-brands-fa-tableau:hover {
+        opacity: 0.3; /* Lower opacity for a lighter effect */
+      }
+
+      /* -----Icon hover effects for the Main SideBar--------*/
+      #nav ul li a:hover .icon:before {
+        color: #e27689; /* Match hover color */
+      }
+
+      /* Ensure the about page navigation uses the same styles */
+      #nav ul li a:hover span {
+        color: #e27689; /* Match hover color */
+      }
+
+      /*--------------- Commen Setting for all Pages -ENDS-------------- */
+
+      /* ---------------Home Page Features-----------------------------*/
+      .duygu-logo {
+        display: block;
+        margin: 20px auto;
+        width: 100px;
+        height: 100px;
+      }
+
+      .profile-section {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+
+      .profile-section img {
+        border-radius: 200px;
+        max-width: 300px;
+        margin-right: 20px;
+        border: 5px solid #f8f5f6;
+      }
+
+      .profile-section .description {
+        max-width: 900px;
+        text-align: left;
+      }
+
+      .download-cv {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 20px 0;
+        font-size: 16px;
+        color: #333;
+        text-decoration: none;
+        border: 2px solid #333;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+      }
+
+      .download-cv:hover {
+        background-color: #333;
+        color: #fff;
+      }
+
+      @media (max-width: 768px) {
+        .profile-section {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .profile-section img {
+          margin-right: 0;
+          margin-bottom: 20px;
+          max-width: 80%;
+        }
+
+        .profile-section .description {
+          max-width: 90%;
+          text-align: center;
+        }
+
+        #nav ul {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        #nav ul li {
+          margin-bottom: 10px;
+        }
+      }
+      /* ---------------Home Page Features ENDS----------------------------*/
+    </style>
+  </head>
+  <body class="is-preload">
+    <!-- Header -->
+    <div id="header">
+      <div class="top">
+        <div id="logo">
+          <h2 id="title">Explore</h2>
+        </div>
+        <nav id="nav">
+          <ul>
+            <li>
+              <a href="#top" id="top-link"
+                ><span class="icon solid fa-home">Home</span></a
+              >
+            </li>
+            <li>
+              <a href="about.html" id="about-link"
+                ><span class="icon solid fa-user">About</span></a
+              >
+            </li>
+            <li>
+              <a href="portfolio.html" id="portfolio-link"
+                ><span class="icon solid fa-th">Portfolio</span></a
+              >
+            </li>
+            <li>
+              <a
+                href="https://medium.com/@duygujones"
+                id="blog-link"
+                target="_blank"
+                ><span class="icon solid fa-pencil-alt">Blog</span></a
+              >
+            </li>
+            <li>
+              <a href="#contact" id="contact-link"
+                ><span class="icon solid fa-envelope">Contact</span></a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="bottom">
+        <ul class="icons">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/duygujones/"
+              class="icon brands fa-linkedin"
+              target="_blank"
+              ><span class="label">LinkedIn</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://github.com/Duygu-Jones"
+              class="icon brands fa-github"
+              target="_blank"
+              ><span class="label">Github</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.kaggle.com/duygujones"
+              class="icon brands fa-kaggle"
+              target="_blank"
+              ><span class="label">Kaggle</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="https://public.tableau.com/app/profile/duygu.jones/vizzes"
+              class="icon-brands-fa-tableau"
+              target="_blank"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://x.com/Jones_duygu"
+              class="icon brands fa-twitter"
+              target="_blank"
+              ><span class="label">Twitter</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="mailto:duygujones@gmail.com"
+              class="icon solid fa-envelope"
+              target="_blank"
+              ><span class="label">Email</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+      <!-- Intro -->
+      <section id="top" class="one dark cover">
+        <div class="container">
+          <header>
+            <h2 class="alt big-bold"><strong>DUYGU JONES</strong></h2>
+            <div class="divider"></div>
+            <p>Data Scientist | Machine Learning Engineer</p>
+          </header>
+        </div>
+      </section>
+
+      <!-- Profile Section -->
+      <section class="profile-section">
+        <div class="centered-divider">
+          <img src="images/DuyguJ_pic.jpg" alt="Duygu Jones" />
+          <div class="divider"></div>
+          <a href="path/to/DuyguJones_CV.pdf" class="download-cv" download
+            >Download CV</a
+          >
+        </div>
+        <div class="description">
+          <h3>Welcome to My Space!</h3>
+          <ul>
+            <li>
+              Duygu Jones is a passionate Data Scientist and Researcher with
+              strong analytical skills and automation expertise.
+            </li>
+            <li>
+              Capable of analyzing exploratory data using Python, MS SQL, and
+              Power BI/Tableau.
+            </li>
+            <li>
+              Proficient in data analysis tools, visualization, and mining
+              techniques.
+            </li>
+            <li>
+              Experienced in the Software Development Life Cycle (SDLC) with
+              Agile methodology.
+            </li>
+            <li>
+              Regardless of the field of implementation, interested in working
+              on all subjects that fall within the scope of machine learning,
+              deep learning, and reinforcement learning.
+            </li>
+            <li>
+              Experienced in various industries including healthcare and
+              education.
+            </li>
+            <li>
+              Has over 5 years of experience in healthcare and academia, working
+              as a researcher and data analyst with extensive domain knowledge
+              in healthcare.
+            </li>
+          </ul>
+          <p>
+            Feel free to explore my projects and blog on data science and
+            machine learning.
+          </p>
+        </div>
+      </section>
+
+      <!-- Other sections can be added here -->
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+      <!-- Copyright -->
+      <ul class="copyright">
+        <li>&copy; Duygu Jones. All rights reserved.</li>
+        <li>Design: <a href="http://html5up.net">Duygu Jones</a></li>
+      </ul>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

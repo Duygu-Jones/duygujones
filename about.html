@@ -1,0 +1,535 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>About - Duygu Jones</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    
+    <style>
+/*-------- Commen Setting for all Pages ---Custom styles------------ */
+        .divider {
+            border-bottom: 1px solid #d3d2d2;
+            width: 50%;
+            margin: 20px auto;
+        }
+        .big-bold {
+            font-size: 2.9em;
+            font-weight: bold;
+        }
+
+        /* Custom styles */
+        .short-cover {
+            height: 200px;
+        }
+
+        .icon-brands-fa-tableau {
+            display: inline-block;
+            width: 24px !important; /* Ensuring this rule takes precedence */
+            height: 24px !important; /* Ensuring this rule takes precedence */
+            background: url('images/tableauIcon2.png') no-repeat center center;
+            background-size: contain;
+            vertical-align: middle;
+            transition: opacity 0.3s;
+        }
+
+        .icon-brands-fa-tableau:hover {
+            opacity: 0.3; /* Lower opacity for a lighter effect */
+        }
+
+        /* --------Icon hover effects for the Main SideBar------------*/
+        #nav ul li a:hover .icon:before {
+            color: #E27689; /* Match hover color */
+        }
+
+        /* Ensure the about page navigation uses the same styles */
+        #nav ul li a:hover span {
+            color: #E27689; /* Match hover color */
+        }
+
+/*----- Commen Setting for all Pages ---ENDS------- */
+
+
+        
+/* ----------Technical Skills Section on About Page -----------*/
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+            margin: 20px;
+        }
+
+        .skill {
+            margin-bottom: 15px;
+        }
+
+        .skill span {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .bar {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 10px;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background-color: #ba698a;
+            transition: width 0.3s ease;
+        }
+
+        /* Tooltip container */
+        .skill[data-tooltip] {
+            position: relative;
+            cursor: pointer;
+        }
+
+        /* Tooltip text */
+        .skill[data-tooltip]::before {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%; /* Position the tooltip above the skill bar */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s;
+            z-index: 1000;
+            white-space: nowrap;
+            font-size: 0.8em;
+        }
+
+        /* Show the tooltip text on hover */
+        .skill[data-tooltip]:hover::before {
+            opacity: 1;
+            visibility: visible;
+        }
+
+    </style>
+    
+</head>
+<body class="is-preload">
+    <!-- Header -->
+    <div id="header">
+        <div class="top">
+            <div id="logo">
+                <h2 id="title">Explore</h2>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
+                    <li><a href="#about-me" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+                    <li><a href="#work-experience" id="work-link"><span class="icon solid fa-briefcase">Work Experience</span></a></li>
+                    <li><a href="#education" id="education-link"><span class="icon solid fa-graduation-cap">Education</span></a></li>
+                    <li><a href="#courses" id="courses-link"><span class="icon solid fa-book">Certifications</span></a></li>
+                    <li><a href="#technical-skills" id="skills-link"><span class="icon solid fa-tools">Technical Skills</span></a></li>
+                    <li><a href="contact.html" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="bottom">
+            <ul class="icons">
+                <li><a href="https://www.linkedin.com/in/duygujones/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+                <li><a href="https://github.com/Duygu-Jones" class="icon brands fa-github" target="_blank"><span class="label">Github</span></a></li>
+                <li><a href="https://www.kaggle.com/duygujones" class="icon brands fa-kaggle" target="_blank"><span class="label">Kaggle</span></a></li>
+                <li><a href="https://public.tableau.com/app/profile/duygu.jones/vizzes" class="icon-brands-fa-tableau" target="_blank"></a></li>
+                <li><a href="https://x.com/Jones_duygu" class="icon brands fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+                <li><a href="mailto:duygujones@gmail.com" class="icon solid fa-envelope" target="_blank"><span class="label">Email</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+        <!-- Intro -->
+        <section id="top" class="one dark cover short-cover">
+            <div class="container">
+                <header>
+                    <h2 class="alt big-bold"><strong>DUYGU JONES</strong></h2>
+                    <div class="divider"></div>
+                    <p>Data Scientist | Machine Learning Engineer</p>
+                </header>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="content-section" id="about-me">
+            <div class="container">
+                <div class="content">
+                    <h2>ABOUT ME</h2>
+                    <p>Duygu Jones is a passionate Data Scientist and Researcher with strong analytical skills and automation expertise.
+                        Capable of analyzing exploratory data using Python, MS SQL, and Power BI/Tableau.
+                        Proficient in data analysis tools, visualization, and mining techniques.
+                        Experienced in the Software Development Life Cycle (SDLC) with Agile methodology.
+                        Regardless of the field of implementation, interested in working on all subjects that fall within the scope of machine learning, deep learning, and reinforcement learning.
+                        Experienced in various industries including healthcare and education.
+                        Has over 5 years of experience in healthcare and academia, working as a researcher and data analyst with extensive domain knowledge in healthcare.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="work-experience">
+            <div class="container">
+                <div class="content">
+                    <h2>WORK EXPERIENCE</h2>
+                    
+                            <h3>Internship Project at Techpro Education</h3>
+                            <h4> Aug 2023 - Feb 2024 | Remote</h4>
+                            <h4>Software QA Analyst | QA Team Lead </h4>
+                            <p>Followed agile methodology and led scrum sessions.
+                                Performed thorough testing of software applications, databases, and algorithms to identify and report inconsistencies.
+                                Developed and maintained comprehensive test plans, cases and scripts.
+                                Utilised Jira as the project management tool and Xray to enhance bug tracking and workflow efficiency.
+                                Developed and implemented POM-based test automation BDD Framework using Selenium WebDriver and Cucumber with the Java programming language.
+                                Integrated Rest Assured for API automation testing, utilized JDBC, and SQL queries for database testing. 
+                                Responsible for the end-to-end automation framework (with over 200+ test cases and multiple dealer setups).
+                                Git/GitHub version control was used effectively to keep track of any changes and collaborative development.
+                                Demonstrated strong teamwork and reliability, ensuring seamless collaboration and support within the QA team.</p>
+                             <div class="divider"></div>
+
+                            <h3>Medical Office Associate at MEF International Schools</h3>
+                            <h4> Sep 2022 - Jun 2023 | Izmir, Turkey</h4>
+                            <p>MEF International Schools is a prestigious educational institution known for its diverse and inclusive environment, 
+                                offering a global education to students from various cultural backgrounds. 
+                                I have worked in MEF Izmir for an academic year, where I significantly improved my communication and problem-solving skills. 
+                                My role involved supporting and coordinating between colleagues, children, and parents, 
+                                which required effective communication and adaptability to various cultural settings. 
+                                This experience helped me develop strong English language skills, organizational abilities, 
+                                and the capacity to handle complex situations effectively. 
+                                These skills are valuable in data science, where understanding diverse perspectives, 
+                                managing data, and deriving meaningful insights are crucial.</p>
+                             <div class="divider"></div>
+
+                             <h3>Academic Researcher at Biruni University</h3>
+                            <h4>Sep 2020 - Jun 2021 | Istanbul, Turkey</h4>
+                            <p>I focused on health sciences research and data analysis. 
+                                My role involved conducting detailed statistical analyses and contributing 
+                                to various research projects. This role enhanced my research skills, analytical thinking, 
+                                and proficiency in managing complex data sets. 
+                                It provided me with a solid foundation in data analysis techniques, 
+                                which are crucial for my current work in data science.</p>
+                             <div class="divider"></div>
+
+                            <h3>Internship Project at Career Change Wales - Training Academy</h3>
+                            <h4>Nov 2017 - Aug 2018 | Cardiff, Wales, United Kingdom</h4>
+                            <p>As a Project Volunteer at Career Change Wales, I dedicated my time to learning and gaining experience. 
+                                I supported team activities, conducted feasibility studies, and developed training materials. 
+                                I managed website administration, handled marketing activities, and contributed to Erasmus+ projects. 
+                                Additionally, I mentored and assisted youth from various European countries, which required
+                                enhancing effective communication and adaptability in a multicultural environment. 
+                                This role strengthened my teamwork, organizational skills, and ability to manage multiple tasks.</p>
+                             <div class="divider"></div>
+
+                             <h3>Healthcare Professional at Eskisehir Osmangazi University Hospital</h3>
+                            <h4>July 2012 - Aug 2017 | Eskisehir, Turkey</h4>
+                            <p>I worked in the Medical Oncology department, gained extensive experience in patient care, medical procedures, and
+                                 healthcare management. This long-term position developed my strong organizational skills, 
+                                 attention to detail, and deep understanding of the healthcare industry. 
+                                 These experiences equipped me with a diverse skill set, including effective communication, 
+                                 teamwork, and problem-solving, which are essential in software research, and project management. 
+                                 I leverage these skills in my current role as a Data Scientist to manage complex data, ensure accuracy, 
+                                 and collaborate effectively within a team.</p>
+                        
+                        <!-- Add more work experiences here if needed -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="education">
+            <div class="container">
+                <div class="content">
+                    <h2>EDUCATION</h2>
+
+                    <h3>Richmond College London </h3>
+                            <h4>Bachelor's Degree in Information Technologies and Computer Science | Sep 2023 - Present </h4>
+                            <p>Learned scientific process and published medical articles and projects.
+                                Developed strong research and analytical skills.</p>
+                             <div class="divider"></div>
+
+                    <h3>University of Health Sciences</h3>
+                            <h4>Master's Degree in Faculty of Health Sciences | Sep 2019 - Sep 2022</h4>
+                            <p>Learned scientific process and published medical articles and projects.
+                                Developed strong research and analytical skills.</p>
+                             <div class="divider"></div>
+
+                    <h3>Eskisehir Osmangazi University</h3>
+                            <h4>Bachelor's Degree in Faculty of Health Sciences | Sep 2012 - Jun 2016</h4>
+                            <p>I hold a Bachelor's degree in Health Sciences, with a particular interest 
+                                in statistics, research, and analysis. During my studies, I volunteered to assist lecturers, 
+                                eager to deepen my understanding of the scientific process and enhance my research skills. 
+                                This experience laid a strong foundation for my analytical and research abilities, 
+                                significantly contributing to my interdisciplinary knowledge and capabilities.</p>
+
+
+                    <!-- Add more education details here if needed -->
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section" id="courses">
+            <div class="container">
+                <div class="content">
+                    <h2>COURSES & CERTIFICATES</h2>
+                        <h3>Supervised Machine Learning: Regression and Classification </h3>
+                            <h4>DeepLearning.AI, Coursera, Stanford CPD, UVM | Issued May 2024 </h4>
+                            <h4>Credential ID: <a href="https://coursera.org/share/6176e08f4f418c42b06a0635fa2b7507" target="_blank">396TNRQYZCPA</a></h4>
+                             <div class="divider"></div>
+
+                        <h3>Full-Stack Automation Engineering Program </h3>
+                            <h4>TechPro Education | Issued Feb 2024 </h4>
+                            <h4>Credential ID: <a href="https://lms.techproeducation.com/admin/tool/certificate/index.php?code=2049532048DJ" target="_blank">2049532048DJ</a></h4>
+                            <p>Skills:  JUnit, TestNG, Selenium, Cucumber Framework, REST APIs, SQL, Databases, Software Analysis, Test Coverage, Testing Process, Manuel and Automated Testing, GitHub.</p>
+                             <div class="divider"></div>
+
+                        <h3>ISTQB Foundation Level (CTFL) </h3>
+                            <h4>Turkish Testing Board | Issued Feb 2024 </h4>
+                            <h4>Credential ID: <a href="https://app.diplomasafe.com/en-US/diploma/db5cbe8274360a04548470a55024268c7d314ac94" target="_blank">0224CTFL6619</a></h4>
+                            <div class="divider"></div>
+
+                          <h3>API Testing</h3>
+                            <h4>Udemy | Issued Jan 2024 </h4>
+                            <h4>Credential ID:  UC-be32e0c7-62b3-4a6c-b4a8-a7ad3361fa53</h4>
+
+                    <!-- Add more courses here if needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="content-section" id="technical-skills">
+            <div class="container">
+                <div class="content">
+                    <h2>TECHNICAL SKILLS</h2>
+                    <h4>1 - Basic &nbsp;&nbsp; 2 - Novice &nbsp;&nbsp; 3 - Intermediate &nbsp;&nbsp; 4 - Advanced &nbsp;&nbsp; 5 - Expert</h4>
+
+                    <div class="skills">
+                        
+                        <div class="skill-category">
+                            <h3>Data Science</h3>
+                            <div class="skill" data-level="4" data-tooltip="Advanced proficiency in data visualization.">
+                                <span>Data Visualization - 4</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="4" data-tooltip="Advanced knowledge in statistics.">
+                                <span>Statistics - 4</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Advanced proficiency in Power BI.">
+                                <span>Power BI - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="4" data-tooltip="Advanced proficiency in Tableau.">
+                                <span>Tableau - 4</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate knowledge in Machine learning.">
+                                <span>Machine Learning - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Advanced knowledge in supervised machine learning.">
+                                <span>Supervised ML - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate knowledge in unsupervised machine learning.">
+                                <span>Unsupervised ML - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate knowledge in deep learning.">
+                                <span>Deep Learning - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                        <div class="skill-category">
+                            <h3>Software Engineering</h3>
+                            <div class="skill" data-level="4" data-tooltip="Advanced knowledge of databases.">
+                                <span>Databases - 4</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="4" data-tooltip="Advanced proficiency in SQL.">
+                                <span>SQL - 4</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate knowledge of Rest APIs.">
+                                <span>Rest APIs - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate proficiency in DBeaver.">
+                                <span>DBeaver - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate proficiency in PostgreSQL.">
+                                <span>PostgreSQL - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill" data-level="3" data-tooltip="Intermediate proficiency in Postman.">
+                                <span>Postman - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate proficiency in web scraping.">
+                                <span>Web Scraping - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate proficiency in automation.">
+                                <span>Automation - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate proficiency in quality assurance analysis.">
+                                <span>QA Analysis - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skill-category">
+                            <h3>Programming Languages</h3>
+                            <div class="skill" data-level="4" data-tooltip="Advanced proficiency in Python programming.">
+                                <span>Python - 4</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate proficiency in Java programming.">
+                                <span>Java - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="2" data-tooltip="Intermediate proficiency in HTML and CSS.">
+                                <span>HTML - CSS - 2</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3>Project Management</h3>
+                            <div class="skill" data-level="4" data-tooltip="Advanced knowledge of SDLC.">
+                                <span>SDLC - 4</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate knowledge of Agile Methodologies.">
+                                <span>Agile Methodologies - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="3" data-tooltip="Intermediate proficiency in Jira.">
+                                <span>Jira - 3</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="skill" data-level="4" data-tooltip="Intermediate proficiency in Git/Github.">
+                                <span>Git/Github - 4</span>
+                                <div class="bar">
+                                    <div class="bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+</div>
+
+
+
+
+    <!-- Footer -->
+    <div id="footer">
+        <ul class="copyright">
+            <li>&copy; Duygu Jones. All rights reserved.</li><li>Design: <a href="http://html5up.net">Duygu Jones</a></li>
+        </ul>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            // Smooth scrolling for internal links
+            $('a[href*="#"]').on('click', function(e) {
+                e.preventDefault();
+
+                $('html, body').animate({
+                    scrollTop: $($(this).attr('href')).offset().top
+                }, 500, 'linear');
+            });
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var skills = document.querySelectorAll('.skill');
+            skills.forEach(function(skill) {
+                var level = skill.getAttribute('data-level');
+                var barFill = skill.querySelector('.bar-fill');
+                if (barFill) {
+                    barFill.style.width = (level * 20) + '%';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
