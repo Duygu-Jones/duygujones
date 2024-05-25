@@ -9,22 +9,9 @@
     />
     <link rel="stylesheet" href="assets/css/main.css" />
     <style>
-      /*-------- Commen Setting for all Pages ---Custom styles----------- */
-      .divider {
-        border-bottom: 1px solid #d3d2d2;
-        width: 50%;
-        margin: 20px auto;
-      }
-      .big-bold {
-        font-size: 2.9em;
-        font-weight: bold;
-      }
+      /*-------- Commen Setting for all Pages ----------- */
 
-      /* Custom styles */
-      .short-cover {
-        height: 200px;
-      }
-
+      /*- Tableau Style for all pages- */
       .icon-brands-fa-tableau {
         display: inline-block;
         width: 24px !important; /* Ensuring this rule takes precedence */
@@ -35,30 +22,7 @@
         transition: opacity 0.3s;
       }
 
-      .icon-brands-fa-tableau:hover {
-        opacity: 0.3; /* Lower opacity for a lighter effect */
-      }
-
-      /* -----Icon hover effects for the Main SideBar--------*/
-      #nav ul li a:hover .icon:before {
-        color: #e27689; /* Match hover color */
-      }
-
-      /* Ensure the about page navigation uses the same styles */
-      #nav ul li a:hover span {
-        color: #e27689; /* Match hover color */
-      }
-
-      /*--------------- Commen Setting for all Pages -ENDS-------------- */
-
-      /* ---------------Home Page Features-----------------------------*/
-      .duygu-logo {
-        display: block;
-        margin: 20px auto;
-        width: 100px;
-        height: 100px;
-      }
-
+      /*------Home Page: Profile Picture and Description ------*/
       .profile-section {
         display: flex;
         align-items: flex-start;
@@ -71,30 +35,16 @@
         border-radius: 200px;
         max-width: 300px;
         margin-right: 20px;
-        border: 5px solid #f8f5f6;
+        border: 0px solid #f8f5f6;
       }
 
       .profile-section .description {
         max-width: 900px;
         text-align: left;
+        font-size: 18px;
       }
 
-      .download-cv {
-        display: inline-block;
-        padding: 10px 20px;
-        margin: 20px 0;
-        font-size: 16px;
-        color: #333;
-        text-decoration: none;
-        border: 2px solid #333;
-        border-radius: 5px;
-        transition: background-color 0.3s, color 0.3s;
-      }
-
-      .download-cv:hover {
-        background-color: #333;
-        color: #fff;
-      }
+      /*---Profile Picture ---*/
 
       @media (max-width: 768px) {
         .profile-section {
@@ -113,6 +63,7 @@
           text-align: center;
         }
 
+        /* Flex-box for side bar elements positon /keep it here in the @media block*/
         #nav ul {
           display: flex;
           flex-direction: column;
@@ -122,11 +73,15 @@
         #nav ul li {
           margin-bottom: 10px;
         }
-      }
-      /* ---------------Home Page Features ENDS----------------------------*/
+      } /* ------------------------------------------------------------------*/
     </style>
   </head>
   <body class="is-preload">
+    <!-- Header Toggle for smaller screens -->
+    <div id="headerToggle">
+      <a href="#header" class="toggle"></a>
+    </div>
+
     <!-- Header -->
     <div id="header">
       <div class="top">
@@ -222,8 +177,11 @@
 
     <!-- Main -->
     <div id="main">
-      <!-- Intro -->
+      <!-- Intro / Dark Mode Section -->
       <section id="top" class="one dark cover">
+        <button id="dark-mode-toggle" class="dark-mode-toggle">
+          Dark Mode: <span id="dark-mode-status">OFF</span>
+        </button>
         <div class="container">
           <header>
             <h2 class="alt big-bold"><strong>DUYGU JONES</strong></h2>
@@ -243,15 +201,15 @@
           >
         </div>
         <div class="description">
-          <h3>Welcome to My Space!</h3>
+          <h3></h3>
           <ul>
             <li>
-              Duygu Jones is a passionate Data Scientist and Researcher with
-              strong analytical skills and automation expertise.
+              A passionate Data Scientist and Researcher with strong analytical
+              skills and automation expertise.
             </li>
             <li>
-              Capable of analyzing exploratory data using Python, MS SQL, and
-              Power BI/Tableau.
+              Capable of analyzing exploratory data using Python, Data
+              Visualization, SQL, and Power BI/Tableau.
             </li>
             <li>
               Proficient in data analysis tools, visualization, and mining
@@ -262,13 +220,13 @@
               Agile methodology.
             </li>
             <li>
-              Regardless of the field of implementation, interested in working
-              on all subjects that fall within the scope of machine learning,
+              Interested in working on all subjects regardless of the field of
+              implementation that fall within the scope of machine learning,
               deep learning, and reinforcement learning.
             </li>
             <li>
-              Experienced in various industries including healthcare and
-              education.
+              Experienced in various industries including automation, healthcare
+              and education.
             </li>
             <li>
               Has over 5 years of experience in healthcare and academia, working
@@ -288,10 +246,8 @@
 
     <!-- Footer -->
     <div id="footer">
-      <!-- Copyright -->
       <ul class="copyright">
-        <li>&copy; Duygu Jones. All rights reserved.</li>
-        <li>Design: <a href="http://html5up.net">Duygu Jones</a></li>
+        <li>&copy; Duygu Jones. All rights reserved. | 2024</li>
       </ul>
     </div>
 
@@ -303,5 +259,45 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- Add this script at the end of the file -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.getElementById("dark-mode-toggle");
+        const darkModeStatus = document.getElementById("dark-mode-status");
+
+        function updateDarkModeStatus() {
+          if (document.body.classList.contains("dark-mode")) {
+            darkModeStatus.textContent = "ON";
+          } else {
+            darkModeStatus.textContent = "OFF";
+          }
+        }
+
+        toggleButton.addEventListener("click", function () {
+          document.body.classList.toggle("dark-mode");
+          // Save the mode to local storage
+          if (document.body.classList.contains("dark-mode")) {
+            localStorage.setItem("theme", "dark");
+          } else {
+            localStorage.setItem("theme", "light");
+          }
+          updateDarkModeStatus();
+        });
+
+        // Load the saved mode from local storage
+        if (localStorage.getItem("theme") === "dark") {
+          document.body.classList.add("dark-mode");
+        }
+        updateDarkModeStatus();
+      });
+
+      // Toggle sidebar on hamburger menu click
+      $(document).ready(function () {
+        $("#headerToggle .toggle").on("click", function () {
+          $("body").toggleClass("header-visible");
+        });
+      });
+    </script>
   </body>
 </html>

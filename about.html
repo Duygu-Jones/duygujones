@@ -7,51 +7,22 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     
     <style>
-/*-------- Commen Setting for all Pages ---Custom styles------------ */
-        .divider {
-            border-bottom: 1px solid #d3d2d2;
-            width: 50%;
-            margin: 20px auto;
-        }
-        .big-bold {
-            font-size: 2.9em;
-            font-weight: bold;
-        }
 
-        /* Custom styles */
-        .short-cover {
-            height: 200px;
-        }
+      /*-------- Commen Setting for all Pages ----------- */
 
+      /*- Tableau Style for all pages- */
         .icon-brands-fa-tableau {
             display: inline-block;
             width: 24px !important; /* Ensuring this rule takes precedence */
             height: 24px !important; /* Ensuring this rule takes precedence */
-            background: url('images/tableauIcon2.png') no-repeat center center;
+            background: url("images/tableauIcon2.png") no-repeat center center;
             background-size: contain;
             vertical-align: middle;
             transition: opacity 0.3s;
-        }
+        } /*------------------------------------------ */
 
-        .icon-brands-fa-tableau:hover {
-            opacity: 0.3; /* Lower opacity for a lighter effect */
-        }
-
-        /* --------Icon hover effects for the Main SideBar------------*/
-        #nav ul li a:hover .icon:before {
-            color: #E27689; /* Match hover color */
-        }
-
-        /* Ensure the about page navigation uses the same styles */
-        #nav ul li a:hover span {
-            color: #E27689; /* Match hover color */
-        }
-
-/*----- Commen Setting for all Pages ---ENDS------- */
-
-
-        
-/* ----------Technical Skills Section on About Page -----------*/
+/* ----------------About Page -----------------------*/       
+        /* -Technical Skills Section */
         .skills {
             display: flex;
             flex-wrap: wrap;
@@ -118,7 +89,7 @@
         .skill[data-tooltip]:hover::before {
             opacity: 1;
             visibility: visible;
-        }
+        }  /*-----------------------------------------------*/
 
     </style>
     
@@ -156,16 +127,18 @@
 
     <!-- Main -->
     <div id="main">
-        <!-- Intro -->
-        <section id="top" class="one dark cover short-cover">
-            <div class="container">
-                <header>
-                    <h2 class="alt big-bold"><strong>DUYGU JONES</strong></h2>
-                    <div class="divider"></div>
-                    <p>Data Scientist | Machine Learning Engineer</p>
-                </header>
-            </div>
-        </section>
+        
+      <!-- Intro / Dark Mode Section -->
+      <section id="top" class="one dark cover">
+        <button id="dark-mode-toggle" class="dark-mode-toggle">Dark Mode: <span id="dark-mode-status">OFF</span></button>
+        <div class="container">
+            <header>
+                <h2 class="alt big-bold"><strong>DUYGU JONES</strong></h2>
+                <div class="divider"></div>
+                <p>Data Scientist | Machine Learning Engineer</p>
+            </header>
+        </div>
+    </section>
 
         <!-- Content Section -->
         <section class="content-section" id="about-me">
@@ -217,7 +190,7 @@
 
                              <h3>Academic Researcher at Biruni University</h3>
                             <h4>Sep 2020 - Jun 2021 | Istanbul, Turkey</h4>
-                            <p>I focused on health sciences research and data analysis. 
+                            <p>Focused on health sciences research and data analysis. 
                                 My role involved conducting detailed statistical analyses and contributing 
                                 to various research projects. This role enhanced my research skills, analytical thinking, 
                                 and proficiency in managing complex data sets. 
@@ -225,14 +198,18 @@
                                 which are crucial for my current work in data science.</p>
                              <div class="divider"></div>
 
-                            <h3>Internship Project at Career Change Wales - Training Academy</h3>
+                            <h3>Internship Project at Career Change Wales - Language Academy Wales Training Academies</h3>
                             <h4>Nov 2017 - Aug 2018 | Cardiff, Wales, United Kingdom</h4>
-                            <p>As a Project Volunteer at Career Change Wales, I dedicated my time to learning and gaining experience. 
-                                I supported team activities, conducted feasibility studies, and developed training materials. 
-                                I managed website administration, handled marketing activities, and contributed to Erasmus+ projects. 
-                                Additionally, I mentored and assisted youth from various European countries, which required
-                                enhancing effective communication and adaptability in a multicultural environment. 
-                                This role strengthened my teamwork, organizational skills, and ability to manage multiple tasks.</p>
+                            <p>CCW and LAW are non-profit organisations and accredited EVS centres working on Erasmus+ KA1, KA2, EVS, 
+                                European Solidarity Corps, and VET programmes. They offer European internship experiences for young people and 
+                                develop new projects and collaborations under the Erasmus+ Programme, European Social Fund, and other European funding sources. 
+                                They specialize in internship services (coordinating, receiving, and sending), and their programmes focus on IT and computer 
+                                skills, as well as personal and professional development training. <br>
+
+                                As a Project Volunteer, I supported team activities, conducted feasibility studies, and developed training materials. 
+                                I managed website administration, handled marketing activities, and contributed to Erasmus+ projects. Additionally, 
+                                I mentored and assisted youth came from various European countries, which required effective communication and adaptability 
+                                in a multicultural environment. This role strengthened my teamwork, organizational skills, and ability to manage multiple tasks.</p>
                              <div class="divider"></div>
 
                              <h3>Healthcare Professional at Eskisehir Osmangazi University Hospital</h3>
@@ -493,7 +470,7 @@
     <!-- Footer -->
     <div id="footer">
         <ul class="copyright">
-            <li>&copy; Duygu Jones. All rights reserved.</li><li>Design: <a href="http://html5up.net">Duygu Jones</a></li>
+            <li>&copy; Duygu Jones. All rights reserved. | 2024</li>
         </ul>
     </div>
 
@@ -530,6 +507,40 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButton = document.getElementById('dark-mode-toggle');
+            const darkModeStatus = document.getElementById('dark-mode-status');
+        
+            function updateDarkModeStatus() {
+                if (document.body.classList.contains('dark-mode')) {
+                    darkModeStatus.textContent = 'ON';
+                } else {
+                    darkModeStatus.textContent = 'OFF';
+                }
+            }
+        
+            toggleButton.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                // Save the mode to local storage
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    localStorage.setItem('theme', 'light');
+                }
+                updateDarkModeStatus();
+            });
+        
+            // Load the saved mode from local storage
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.classList.add('dark-mode');
+            }
+            updateDarkModeStatus();
+        });
+
+        
     </script>
 </body>
 </html>

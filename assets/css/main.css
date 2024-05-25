@@ -7,7 +7,162 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* ----------Content Section on About Page-------------------*/
+
+  /*--------------- Commen Setting for all Pages ---------------- */
+	.divider {
+		border-bottom: 1px solid #d3d2d2;
+		width: 50%;
+		margin: 5px auto;
+	}
+	.big-bold {
+		font-size: 2.9em;
+		font-weight: bold;
+	}
+
+	/* Custom styles */
+	.short-cover {
+		height: 200px;
+	}
+
+	
+
+/*--------- Banner Cover Settings ----------------*/ 
+/* Set the height of the banner on the home page */
+
+.one.dark.cover {
+    height: 300px; /* Banner hight */
+	margin-bottom: 20px;
+    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+    color: #e1dede; /* Ensure text color contrasts well with the background */
+    position: relative;
+    padding: 20px;
+	text-align: center; /* Center text for better responsiveness */
+	font-family: 0, sans-serif; /* Apply the Roboto font family */
+	
+}
+
+/* Responsive design for the cover text */
+	@media screen and (max-width: 960px) {
+		.one.dark.cover header h2 {
+			font-size: 1.5em; /* Adjust the font size for smaller screens */
+		}
+
+		.one.dark.cover header p {
+			font-size: 1em; /* Adjust the font size for smaller screens */
+		}
+
+		.one.dark.cover {
+			padding: 10px;
+		}
+	}
+
+/* Style for the dark mode toggle button */
+.dark-mode-toggle {
+	display: inline-block;
+	font-size: 10px;
+	text-decoration: none;
+    position: absolute;
+    top: 20px; /* Adjust this value as needed */
+    right: 20px; /* Adjust this value as needed */
+    padding: 5px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+	color: #434141; /* Button text color */
+    border: 0px solid #adacac; /* Border color */
+    background-color: #a39a8e; /* Semi-transparent background */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.dark-mode-toggle:hover {
+    background-color: rgba(109, 108, 108, 0.8); /* Darken the button on hover */
+    border-color: #ccc; /* Change border color on hover */
+}
+
+body.dark-mode .dark-mode-toggle {
+    color: #fff;
+    border-color: #595858;
+    background-color: rgba(51, 51, 51, 0.5); /* Semi-transparent background */
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: rgba(51, 51, 51, 0.8); /* Less transparent on hover */
+    color: #fff;
+    border-color: #5a5959;
+}
+
+/* Define dark mode styles */
+body.dark-mode {
+    background-color: #212528;
+    color: #ffffff;
+}
+
+body.dark-mode .one.dark.cover {
+    background-color: rgba(26, 26, 26, 0.8); /* Dark mode cover background */
+}
+
+/* Ensure text backgrounds are transparent */
+.one.dark.cover header,
+.one.dark.cover .container {
+    background: transparent;
+}
+
+
+/*---------------- Side Bar ---------------------------- */
+		/*-- Icons hover over act on the Side bar for all pages--*/
+		.icon-brands-fa-tableau:hover {
+			opacity: 0.3; /* Lower opacity for a lighter effect */
+		}
+
+		/* -----Icon hover effects for the Main SideBar--------*/
+		#nav ul li a:hover .icon:before {
+			color: #e27689; /* Match hover color */
+		}
+
+		/* Ensure the about page navigation uses the same styles */
+		#nav ul li a:hover span {
+			color: #e27689; /* Match hover color */
+		}
+
+		/* Side bar logo set. ---> ADD YOUR LOGO*/
+		.duygu-logo {  
+			display: block;
+			margin: 20px auto;
+			width: 100px;
+			height: 100px;
+		}
+
+/* -----------Style for "Download CV" button --------------*/
+
+.download-cv {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-cv:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark-mode .download-cv {
+    color: #fff;
+    border-color: #fff;
+}
+
+body.dark-mode .download-cv:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+
+/* --------------------- About Page----------------------*/
+/* Content Section-*/
 .content-section {
 	padding: 20px 0;
 	text-align: center;
@@ -48,11 +203,28 @@
 	margin: 0;
 	margin-bottom: 30px;
 	padding-left: 10px;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	line-height: 1.5em;
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;	
+} 
+
+/* Dark mode styles */
+body.dark-mode .content-section h2 {
+    color: #ffffff; /* White color for dark mode */
 }
-/* ----------Content Section on About Page Ends-------------------*/
+
+body.dark-mode .content-section .content h3 {
+    color: #ffffff; /* White color for dark mode */
+}
+
+body.dark-mode .content-section .content h4 {
+    color: #ffffff; /* White color for dark mode */
+}
+
+body.dark-mode .content-section .content p {
+    color: #dddddd; /* Light gray color for dark mode */
+}
+/* --------------------------------------------*/
 
 
 
@@ -2242,10 +2414,17 @@ input, select, textarea {
 
 /* Footer */
 
+	/* Style for Dark Mode footer */
+	body.dark-mode #footer {
+		background-color: #202427; /* Dark mode background color */
+		color: #767575; /* Dark mode text color */
+	}
+
 	#footer {
 		margin-left: 375px;
 		text-align: center;
-		background-color: #dce3e2;
+		background-color: #e5e5e5;
+		color: #848282; /* text color */
 		padding: 3em 0 4em 0;
 		box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
 		font-size: 0.8em;
