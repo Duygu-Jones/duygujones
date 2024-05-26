@@ -1,10 +1,12 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
     <title>About - Duygu Jones</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+
     
     <style>
 
@@ -56,7 +58,7 @@
 
         .bar-fill {
             height: 100%;
-            background-color: #ba698a;
+            background-color: #e27689;
             transition: width 0.3s ease;
         }
 
@@ -95,6 +97,10 @@
     
 </head>
 <body class="is-preload">
+    <!-- Header Toggle for smaller screens -->
+    <div id="headerToggle">
+        <a href="#header" class="toggle"></a>
+      </div>
     <!-- Header -->
     <div id="header">
         <div class="top">
@@ -104,14 +110,22 @@
             <nav id="nav">
                 <ul>
                     <li><a href="index.html" id="top-link"><span class="icon solid fa-home">Home</span></a></li>
-                    <li><a href="#about-me" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
-                    <li><a href="#work-experience" id="work-link"><span class="icon solid fa-briefcase">Work Experience</span></a></li>
-                    <li><a href="#education" id="education-link"><span class="icon solid fa-graduation-cap">Education</span></a></li>
-                    <li><a href="#courses" id="courses-link"><span class="icon solid fa-book">Certifications</span></a></li>
-                    <li><a href="#technical-skills" id="skills-link"><span class="icon solid fa-tools">Technical Skills</span></a></li>
+                    <li class="has-dropdown">
+                    <a href="#about-me" id="about-link"><span class="icon solid fa-user">About</span></a>
+                    <ul class="dropdown">
+                        <li><a href="#work-experience">Work Experience</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#courses">Certifications</a></li>
+                        <li><a href="#technical-skills">Technical Skills</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="portfolio.html" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+                    <li><a href="https://www.kaggle.com/duygujones" id="competitions-link" target="_blank"><span class="icon solid fa-trophy">Competitions</span></a></li>
+                    <li><a href="https://medium.com/@duygujones" id="blog-link" target="_blank"><span class="icon solid fa-pencil-alt">Blog</span></a></li>
                     <li><a href="contact.html" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
                 </ul>
-            </nav>
+                </nav>
+
         </div>
         <div class="bottom">
             <ul class="icons">
@@ -133,6 +147,7 @@
         <button id="dark-mode-toggle" class="dark-mode-toggle">Dark Mode: <span id="dark-mode-status">OFF</span></button>
         <div class="container">
             <header>
+                <img src="assets/images/favicon1.ico" alt="Logo" class="logo-middle">
                 <h2 class="alt big-bold"><strong>DUYGU JONES</strong></h2>
                 <div class="divider"></div>
                 <p>Data Scientist | Machine Learning Engineer</p>
@@ -145,7 +160,7 @@
             <div class="container">
                 <div class="content">
                     <h2>ABOUT ME</h2>
-                    <p>Duygu Jones is a passionate Data Scientist and Researcher with strong analytical skills and automation expertise.
+                    <p>A passionate Data Scientist and Researcher with strong analytical skills and automation expertise.
                         Capable of analyzing exploratory data using Python, MS SQL, and Power BI/Tableau.
                         Proficient in data analysis tools, visualization, and mining techniques.
                         Experienced in the Software Development Life Cycle (SDLC) with Agile methodology.
@@ -483,64 +498,5 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            // Smooth scrolling for internal links
-            $('a[href*="#"]').on('click', function(e) {
-                e.preventDefault();
-
-                $('html, body').animate({
-                    scrollTop: $($(this).attr('href')).offset().top
-                }, 500, 'linear');
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var skills = document.querySelectorAll('.skill');
-            skills.forEach(function(skill) {
-                var level = skill.getAttribute('data-level');
-                var barFill = skill.querySelector('.bar-fill');
-                if (barFill) {
-                    barFill.style.width = (level * 20) + '%';
-                }
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const toggleButton = document.getElementById('dark-mode-toggle');
-            const darkModeStatus = document.getElementById('dark-mode-status');
-        
-            function updateDarkModeStatus() {
-                if (document.body.classList.contains('dark-mode')) {
-                    darkModeStatus.textContent = 'ON';
-                } else {
-                    darkModeStatus.textContent = 'OFF';
-                }
-            }
-        
-            toggleButton.addEventListener('click', function() {
-                document.body.classList.toggle('dark-mode');
-                // Save the mode to local storage
-                if (document.body.classList.contains('dark-mode')) {
-                    localStorage.setItem('theme', 'dark');
-                } else {
-                    localStorage.setItem('theme', 'light');
-                }
-                updateDarkModeStatus();
-            });
-        
-            // Load the saved mode from local storage
-            if (localStorage.getItem('theme') === 'dark') {
-                document.body.classList.add('dark-mode');
-            }
-            updateDarkModeStatus();
-        });
-
-        
-    </script>
 </body>
 </html>

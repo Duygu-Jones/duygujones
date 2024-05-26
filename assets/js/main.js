@@ -4,6 +4,92 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/*----------------New JAvaScript codes.------------------------------ */
+		// Smooth scrolling for internal links
+		$(document).ready(function() {
+			$('a[href*="#"]').on('click', function(e) {
+			e.preventDefault();
+			$('html, body').animate({
+				scrollTop: $($(this).attr('href')).offset().top
+			}, 500, 'linear');
+			});
+		
+			// Toggle sidebar on hamburger menu click
+			$("#headerToggle .toggle").on("click", function() {
+			$("body").toggleClass("header-visible");
+			});
+		});
+		
+		// Skill bar fill based on data-level attribute
+		document.addEventListener("DOMContentLoaded", function() {
+			var skills = document.querySelectorAll('.skill');
+			skills.forEach(function(skill) {
+			var level = skill.getAttribute('data-level');
+			var barFill = skill.querySelector('.bar-fill');
+			if (barFill) {
+				barFill.style.width = (level * 20) + '%';
+			}
+			});
+		});
+		
+		// Dark mode toggle
+		document.addEventListener('DOMContentLoaded', function() {
+			const toggleButton = document.getElementById('dark-mode-toggle');
+			const darkModeStatus = document.getElementById('dark-mode-status');
+		
+			function updateDarkModeStatus() {
+			if (document.body.classList.contains('dark-mode')) {
+				darkModeStatus.textContent = 'ON';
+			} else {
+				darkModeStatus.textContent = 'OFF';
+			}
+			}
+		
+			toggleButton.addEventListener('click', function() {
+			document.body.classList.toggle('dark-mode');
+			// Save the mode to local storage
+			if (document.body.classList.contains('dark-mode')) {
+				localStorage.setItem('theme', 'dark');
+			} else {
+				localStorage.setItem('theme', 'light');
+			}
+			updateDarkModeStatus();
+			});
+		
+			// Load the saved mode from local storage
+			if (localStorage.getItem('theme') === 'dark') {
+			document.body.classList.add('dark-mode');
+			}
+			updateDarkModeStatus();
+		});
+		
+		// Dropdown toggle for About page
+		document.addEventListener("DOMContentLoaded", function() {
+			const aboutLink = document.getElementById("about-link");
+			const dropdown = document.querySelector(".has-dropdown .dropdown");
+		
+			if (aboutLink && dropdown) {
+			console.log('Dropdown and About link found');
+			aboutLink.addEventListener("click", function(event) {
+				event.preventDefault();
+				console.log('About link clicked');
+				dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+			});
+		
+			document.addEventListener("click", function(event) {
+				if (!aboutLink.contains(event.target) && !dropdown.contains(event.target)) {
+				dropdown.style.display = "none";
+				}
+			});
+			} else {
+			console.error('Dropdown or About link not found');
+			}
+		});
+
+/*------------------------------------- */
+
+
+
 (function($) {
 
 	var	$window = $(window),
