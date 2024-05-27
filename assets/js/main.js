@@ -62,29 +62,62 @@
 			}
 			updateDarkModeStatus();
 		});
-		
+
+
+/*----------------------------------------------------------------------------------------- */	
+	document.addEventListener("DOMContentLoaded", function() {
 		// Dropdown toggle for About page
-		document.addEventListener("DOMContentLoaded", function() {
-			const aboutLink = document.getElementById("about-link");
-			const dropdown = document.querySelector(".has-dropdown .dropdown");
-		
-			if (aboutLink && dropdown) {
-			console.log('Dropdown and About link found');
+		const aboutLink = document.getElementById("about-link");
+		const aboutDropdown = aboutLink ? aboutLink.nextElementSibling : null;
+	
+		if (aboutLink && aboutDropdown) {
 			aboutLink.addEventListener("click", function(event) {
 				event.preventDefault();
-				console.log('About link clicked');
-				dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+				aboutDropdown.style.display = aboutDropdown.style.display === "block" ? "none" : "block";
 			});
-		
+	
 			document.addEventListener("click", function(event) {
-				if (!aboutLink.contains(event.target) && !dropdown.contains(event.target)) {
-				dropdown.style.display = "none";
+				if (!aboutLink.contains(event.target) && !aboutDropdown.contains(event.target)) {
+					aboutDropdown.style.display = "none";
 				}
 			});
-			} else {
-			console.error('Dropdown or About link not found');
+		}
+	
+		// Dropdown toggle for Portfolio page
+		const portfolioMainLink = document.getElementById("portfolio-main-link");
+		const portfolioToggleLink = document.getElementById("portfolio-toggle-link");
+		const portfolioDropdown = portfolioToggleLink ? portfolioToggleLink.nextElementSibling : null;
+	
+		if (portfolioMainLink) {
+			portfolioMainLink.addEventListener("click", function(event) {
+				if (!portfolioMainLink.classList.contains("active")) {
+					window.location.href = "portfolio.html"; // Redirect to main Portfolio page
+				}
+			});
+		}
+	
+		if (portfolioToggleLink && portfolioDropdown) {
+			portfolioToggleLink.addEventListener("click", function(event) {
+				event.preventDefault();
+				portfolioDropdown.style.display = portfolioDropdown.style.display === "block" ? "none" : "block";
+			});
+	
+			document.addEventListener("click", function(event) {
+				if (!portfolioToggleLink.contains(event.target) && !portfolioDropdown.contains(event.target)) {
+					portfolioDropdown.style.display = "none";
+				}
+			});
+		}
+	
+		// Set active class for the current page link
+		const currentPage = window.location.pathname.split('/').pop();
+		const navLinks = document.querySelectorAll('#nav ul li a');
+		navLinks.forEach(link => {
+			if (link.getAttribute('href') === currentPage) {
+				link.classList.add('active');
 			}
 		});
+	});
 
 /*------------------------------------- */
 

@@ -13,9 +13,9 @@
 		/* Banner Cover Settings */
 		.one.dark.cover {
 			height: 600px; 
-			margin-bottom: 20px;
+			margin-bottom: 50px;
 			background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
-			color: #e1dede; /* Ensure text color contrasts well with the background */
+			color: #dee1e1; /* Ensure text color contrasts well with the background */
 			position: relative;
 			padding: 20px;
 			text-align: center; /* Center text for better responsiveness */
@@ -27,12 +27,13 @@
 	@media screen and (max-width: 960px) {
 		.one.dark.cover {
 			height: 300px; /* Adjust this value for smaller screens */
-		  }
+		}
 		/*------------Cover Titles--------------*/
 		.one.dark.cover header { /* Title */
 			position: relative;
 			z-index: 2;
 			margin-top: 0px; /* Adjust margin to move elements up */
+			margin-bottom: 10px;
 		}
 
 		.one.dark.cover header h2 {
@@ -43,8 +44,6 @@
 			font-size: 1em; /* Adjust the font size for smaller screens */
 		}
 		
-		
-		
 	}
 
 	.divider { /* Divider in the Cover */
@@ -53,7 +52,7 @@
 		margin: 5px auto;
 	}
 	.big-bold {  /* Title bold */
-		font-size: 2.9em;
+		font-size: 2.3em;
 		font-weight: bold;
 	}
 
@@ -62,9 +61,69 @@
 		height: 200px;
 	}
 
-	
+	/*---------------Banner and elements size-----------------------*/
+		/* Default banner cover styles for the home page */
+.home-page .one.dark.cover {
+    height: 100vh; /* Full height for the home page */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
-	/*------------------Logo--------------------*/
+/* Specific styles for other pages */
+.other-page .one.dark.cover {
+    height: 20vh; /* Smaller height for other pages */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Additional styles to ensure proper centering */
+.one.dark.cover .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    text-align: center;
+}
+
+/* Font size and style for cover content */
+.one.dark.cover .container header h2 {
+    font-size: 3rem; /* Adjust font size for the main title */
+    font-weight: bold; /* Adjust font weight */
+    font-family: 0, sans-serif; /* Change font family */
+}
+
+.one.dark.cover .container header p {
+    font-size: 1.5rem; /* Adjust font size for the subtitle */
+    font-weight: 0; /* Adjust font weight */
+    font-family: 0, sans-serif; /* Change font family */
+    margin-top: 10px; /* Add margin if needed */
+}
+/* Divider settings */
+.one.dark.cover .container header .divider {
+    width: 100%; /* Adjust the width of the divider */
+    height: 1px; /* Adjust the thickness of the divider */
+    background-color: #fff; /* Set the color of the divider */
+    margin: 20px auto; /* Adjust the margin for spacing */
+    border-radius: 1px; /* Add border-radius if you want rounded edges */
+}
+
+
+/*------------------Logo--------------------*/
+.one.dark.cover .container header img {
+    max-width: 150px; /* Adjust the logo size */
+    margin-bottom: 5px; /* Add margin below the logo */
+}
+
+	
 	/* Logo at the top of the main title */
 	.logo-top {
 		display: block;
@@ -95,9 +154,9 @@
     padding: 5px 10px;
     border-radius: 10px;
     cursor: pointer;
-	color: #434141; /* Button text color */
-    border: 0px solid #adacac; /* Border color */
-    background-color: #a39a8e; /* Semi-transparent background */
+	color: #d1d4d6; /* Button text color */
+    border: 0px solid #6ca4d5; /* Border color */
+    background-color: #6ba6d6; /* Semi-transparent background */
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
@@ -144,13 +203,111 @@ body.dark-mode .one.dark.cover {
 
 		/* -----Icon hover effects for the Main SideBar--------*/
 		#nav ul li a:hover .icon:before {
-			color: #e27689; /* Match hover color */
+			color: #73a3d2; /* Match hover color */
 		}
 
 		/* Ensure the about page navigation uses the same styles */
 		#nav ul li a:hover span {
-			color: #e27689; /* Match hover color */
+			color: #73a3d2; /* Match hover color */
 		}
+
+		/* Add active state styles */
+		#nav ul li.active a {
+			background-color: #333; /* Adjust the color to match your active state */
+			color: #fff; /* Adjust the color to match your active state */
+		}
+		
+		#nav ul li.active a .icon:before {
+			color: #73a3d2; /* Adjust the icon color to match your active state */
+		}
+
+
+		/*---------------------SideBar/Dropdown Menu--------------------------*/
+		/* Style for the dropdown menu */
+		.nav ul .dropdown {
+			display: none;
+			position: absolute;
+			left: 0; /* Align dropdown menu directly under the About button */
+			background-color: #545454; /* Change background color */
+			min-width: 160px;
+			z-index: 1;
+			font-size: 10px !important; 
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		
+		
+		.nav ul .dropdown li {
+			display: block;
+		}
+		
+		
+		.nav ul li.has-dropdown ul.dropdown li a {
+			padding: 8px 16px; /* Adjust padding */
+			text-decoration: none;
+			display: block;
+			text-align: left;
+			font-style: italic !important; /* Ensure the text is italic */
+			font-size: 0.7px !important; /* Ensure the font size is applied */
+			color: #c6d5fa !important; /* Ensure text color is applied */
+		}
+		
+		
+		.nav ul .dropdown li a:hover {
+			background-color: #464647; /* Change background color on hover */
+    		color: #73a3d2; /* Change text color on hover */
+		}
+		
+		.nav ul li.has-dropdown:hover .dropdown {
+			display: block;
+		}
+		
+		/* Adjust dropdown position relative to parent */
+		#nav ul li.has-dropdown {
+			position: relative;
+		}
+
+		/* Active state for dropdown items */
+		#nav ul .dropdown li.active a {
+			background-color: #3c3f41; /* Adjust the color to match your active state */
+			color: #73a3d2; /* Adjust the color to match your active state */
+		}
+
+		#nav ul .dropdown li.active a .icon:before {
+			color: #73a3d2; /* Adjust the icon color to match your active state */
+		}
+		
+		/*-----------------------------------*/
+
+		/*-----------Portfolio dropdown symbol settings----------------*/
+		/* Change the color of the dropdown icon */
+		#portfolio-toggle-link {
+			
+			color: #73a3d2; /* Change this color to your desired color */
+			transition: color 0.3s ease;
+			display: inline-flex;
+			align-items: right;
+			justify-content: right;
+			padding: 0 25px;  /* position of the dd symbol*/
+			margin-left: auto; /* Ensure it is aligned to the right */
+			border-radius: 0px;
+		}
+
+		#portfolio-toggle-link:hover {
+			color: #73a3d2; /* Change this color to the color on hover if needed */
+		}
+
+		/* Flex container for centering the icon */
+		.nav li.has-dropdown {
+			display: flex;
+			align-items: right;
+			justify-content: space-between; /* Ensure space between the text and icon */
+			width: 100%;
+		}
+
+
 
 /* -----------Style for "Download CV" button --------------*/
 
@@ -247,46 +404,90 @@ body.dark-mode .content-section .content p {
 }
 /* --------------------------------------------*/
 
+/* -------------EDA Project -------------------------------*/
+/* Add styles for hover effects on project images */
+.project {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 20px;
+    display: inline-block;
+}
 
-/*---------------------About-Toggle/Dropdown Menu--------------------------*/
-		/* Style for the dropdown menu */
-		.nav ul .dropdown {
-			display: none;
-			position: absolute;
-			left: 0; /* Align dropdown menu directly under the About button */
-			background-color: #545454; /* Change background color */
-			min-width: 160px;
-			z-index: 1;
-			font-size: 14px; /* font size */
-			list-style: none;
-			padding: 0;
-			margin: 0;
-		}
-		
-		.nav ul .dropdown li {
-			display: block;
-		}
-		
-		.nav ul .dropdown li a {
-			color: #a15767; /* Change text color */
-			padding: 8px 16px; /* Adjust padding */
-			text-decoration: none;
-			display: block;
-			text-align: left;
-		}
-		
-		.nav ul .dropdown li a:hover {
-			background-color: #5a2a2a; /* Change background color on hover */
-		}
-		
-		.nav ul li.has-dropdown:hover .dropdown {
-			display: block;
-		}
-		/* Adjust dropdown position relative to parent */
-		#nav ul li.has-dropdown {
-			position: relative;
-		}/*-----------------------------------*/
+.project img {
+    width: 100%;
+    border-radius: 10px;
+}
 
+.project .description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(190, 232, 240, 0.7);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 10px;
+}
+
+.project:hover .description {
+    opacity: 1;
+} /*------------------------------------------*/
+
+
+/* ---------------Contact page---------------*/
+/* Contact section */
+#contact {
+    background-color: #cdf1f7; /* Change this color to your desired background color */
+    padding: 100px 0;
+}
+
+#contact .container {
+    background: rgba(230, 242, 245, 0.868); /* Semi-transparent background */
+    padding: 30px;
+    border-radius:10px;
+}
+
+#contact header h2 {
+    color: #333;
+    font-size: 2.5rem;
+}
+
+#contact p {
+    color: #666;
+}
+
+#contact input,
+#contact textarea {
+    background: rgba(255, 255, 255, 1);
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#contact input[type="submit"] {
+    background: #0750a9;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    padding: 15px 30px; /* Adjust size */
+    font-size: 1.2rem; /* Adjust font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+}
+
+#contact input[type="submit"]:hover {
+    background: #0f8aef;
+}
+/*----------------------------------------------*/
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -456,7 +657,7 @@ input, select, textarea {
 	}
 
 		a:hover {
-			color: #E27689;
+			color: #71a5d5;
 			border-bottom-color: rgba(255, 255, 255, 0);
 		}
 
@@ -2460,13 +2661,13 @@ input, select, textarea {
 					}
 
 				#nav ul li a.active {
-					background: rgba(0, 0, 0, 0.15);
+					background: rgba(226, 228, 230, 0.15);
 					box-shadow: inset 0 0 0.25em 0 rgba(0, 0, 0, 0.125);
-					color: #fff;
+					color: #73a3d2;
 				}
 
 					#nav ul li a.active span:before {
-						color: #e27689;
+						color: #73a3d2;
 					}
 
 /* Footer */
@@ -2480,7 +2681,7 @@ input, select, textarea {
 	#footer {
 		margin-left: 375px;
 		text-align: center;
-		background-color: #e5e5e5;
+		background-color: #ffffff;
 		color: #848282; /* text color */
 		padding: 3em 0 4em 0;
 		box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.05), inset 0 0.1em 0.1em 0 rgba(0, 0, 0, 0.025);
@@ -2552,7 +2753,7 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #6f8681;
-				background-image: url("../../images/banner.jpg");
+				background-image: url("../../images/WideBannerDJ1.png");
 			}
 
 			#main > section.two {

@@ -2,26 +2,27 @@
 <html>
 
 <head>
-    <title>Portfolio - Duygu Jones</title>
+    <title>Advanced Notebooks - Duygu Jones</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="icon" href="assets/images/DuyguBoatLogoFavicon1.ico" type="image/x-icon" />
     <style>
-        /*-------- Commen Setting for all Pages ----------- */
-  
+        /*-------- Common Setting for all Pages ----------- */
+
         /*- Tableau Style for all pages- */
         .icon-brands-fa-tableau {
-          display: inline-block;
-          width: 24px !important; /* Ensuring this rule takes precedence */
-          height: 24px !important; /* Ensuring this rule takes precedence */
-          background: url("images/tableauIcon2.png") no-repeat center center;
-          background-size: contain;
-          vertical-align: middle;
-          transition: opacity 0.3s;
+            display: inline-block;
+            width: 24px !important;
+            height: 24px !important;
+            background: url("images/tableauIcon2.png") no-repeat center center;
+            background-size: contain;
+            vertical-align: middle;
+            transition: opacity 0.3s;
         }
-    </style>  
+    </style>
 </head>
+
 <body class="is-preload other-page">
     <!-- Header Toggle for smaller screens -->
     <div id="headerToggle">
@@ -43,8 +44,9 @@
                         <ul class="dropdown">
                             <li><a href="eda.html">Exploratory Data Analysis (EDA)</a></li>
                             <li><a href="data_visualization.html">Data Visualization</a></li>
+                            <li class="active"><a href="advanced_notebooks.html">Advanced Notebooks</a></li>
                             <li><a href="machine_learning.html">Machine Learning</a></li>
-                            <li><a href="advanced_notebooks.html">Advanced Notebooks</a></li>
+                            
                         </ul>
                     </li>
                     <li><a href="https://www.kaggle.com/work/competitions" id="competitions-link" target="_blank"><span class="icon solid fa-trophy">Competitions</span></a></li>
@@ -69,9 +71,7 @@
     <div id="main">
         <!-- Intro / Dark Mode Section -->
         <section id="top" class="one dark cover">
-            <button id="dark-mode-toggle" class="dark-mode-toggle">
-                Dark Mode: <span id="dark-mode-status">OFF</span>
-            </button>
+            <button id="dark-mode-toggle" class="dark-mode-toggle">Dark Mode: <span id="dark-mode-status">OFF</span></button>
             <div class="container">
                 <header>
                     <img src="images/DuyguBoatLogoFavicon1.png" alt="Logo" class="logo-middle">
@@ -82,20 +82,26 @@
             </div>
         </section>
 
-        <!-- Content Section for Portfolio -->
-        <section class="content-section" id="portfolio">
+        <!-- Content Section for Advanced Notebooks -->
+        <section class="content-section" id="advanced-notebooks">
             <div class="container">
                 <div class="content">
-                    <h2>PROJECT PORTFOLIO</h2>
-                    <p>Welcome to My Project Portfolio!<br><br>
-
-                        Explore my collection of projects, ranging from in-depth data analysis and visualization to 
-                        practical applications in machine learning, deep learning, time series analysis and NLP. 
-                        My portfolio covers a wide range of topics and is continuously expanding. 
-                        You'll find projects that uncover hidden patterns in data, predict future trends, 
-                        and visualize complex information in an easy-to-understand way. Each project is a step in my journey 
-                        to solve real-world problems using data. <br><br>
-                        Dive in and discover the stories behind the numbers!</p>
+                    <h2>Advanced Notebooks</h2>
+                    <div class="projects">
+                        <div class="project">
+                            <a href="https://github.com/Duygu-Jones/project1">
+                                <img src="images/project1_thumbnail.jpg" alt="Project 1">
+                                <div class="description">Project 1 Description</div>
+                            </a>
+                        </div>
+                        <div class="project">
+                            <a href="https://github.com/Duygu-Jones/project2">
+                                <img src="images/project2_thumbnail.jpg" alt="Project 2">
+                                <div class="description">Project 2 Description</div>
+                            </a>
+                        </div>
+                        <!-- Add more projects as needed -->
+                    </div>
                 </div>
             </div>
         </section>
@@ -117,4 +123,5 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
