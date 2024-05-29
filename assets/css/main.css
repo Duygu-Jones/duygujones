@@ -44,7 +44,7 @@
 }
 
 .footer-social .logo img {
-    height: 140px;
+    height: 120px;
     width: auto;
 }
 
@@ -66,7 +66,7 @@
 }
 
 .footer-social .social-icon {
-    height: 60px;
+    height: 60px; /* Default size */
     width: 60px;
     display: block;
     vertical-align: middle;
@@ -94,20 +94,19 @@
 /* General settings for the logo and social icons */
 .logo-image {
     height: auto;
-    width: 140px; /* Default size */
+    width: 150px; /* Default size */
     transition: all 0.3s ease-in-out;
 }
 
 .social-icon {
-    height: 60px; /* Default size */
-    width: 60px;
+    
     transition: all 0.3s ease-in-out;
 }
 
 /* Responsive design for larger screens */
 @media screen and (min-width: 1200px) {
     .logo-image {
-        width: 200px; /* Increase size for larger screens */
+        width: 150px; /* Increase size for larger screens */
     }
 
     .social-icon {
@@ -119,7 +118,7 @@
 /* Responsive design for medium screens */
 @media screen and (max-width: 1199px) and (min-width: 768px) {
     .logo-image {
-        width: 160px; /* Adjust size for medium screens */
+        width: 140px; /* Adjust size for medium screens */
     }
 
     .social-icon {
@@ -135,8 +134,8 @@
     }
 
     .social-icon {
-        height: 50px; /* Decrease size for smaller screens */
-        width: 50px;
+        height: 60px; /* Decrease size for smaller screens */
+        width: 60px;
     }
 }
 
@@ -168,7 +167,7 @@
     display: flex;
     justify-content: center; /* Horizontally center */
     align-items: center;     /* Vertically center */
-    height: 80vh;           /* Full viewport height */
+    height: 50vh;           /* Full viewport height */
     text-align: center;      /* Center text alignment */
     flex-direction: column;  /* Stack elements vertically */
 	margin: 0;               /* Remove margin */
@@ -277,6 +276,7 @@ html, body {
     position: sticky;
     top: 0;
     border-radius: 10px; /* Optional: To make the corners rounded */
+	margin-top: 0px; /* Adjust this value as needed */
 }
 
 #contents-section ul {
@@ -294,7 +294,7 @@ html, body {
 #contents-section ul li a {
     color: #edf0f0;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     padding: 0px 20px;
     border: 1px solid #0e757e;
     border-radius: 4px;
@@ -321,8 +321,9 @@ html, body {
 
 /* Offset for the fixed contents section */
 #main {
-    margin-top: 60px;
+    margin-top: 5px;
 }
+
 
 /* Responsive design for smaller screens */
 @media screen and (max-width: 1024px) {
@@ -2609,7 +2610,7 @@ input, select, textarea {
 	} */
 
 	footer.major {
-		margin: 4em 0 0 0;
+		margin: 1em 0 0 0;
 	}
 
 /* Form */
@@ -3944,10 +3945,10 @@ input, select, textarea {
 
 	#footer {
 		background: #000b12;
-		padding: 40px 0;
+		padding: 1px 0;
 		text-align: center; /* Center the text */
 		position: relative; /* Ensure it stays at the bottom */
-		bottom: 20; /* Position at the bottom */
+		bottom: 10; /* Position at the bottom */
 		width: 100%; /* Full width */
 		margin-top: auto; /* Push footer to the bottom */
 		padding-bottom: 5em;
