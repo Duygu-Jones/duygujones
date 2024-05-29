@@ -7,7 +7,10 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* -------------------------------------------------------------- */
+/*Nav bar new settings*/
+
+
+/* ----------------------Home Page-------------------------------- */
 /* Ensure the logo is displayed instead of undefined text on smaller screens */
 @media (max-width: 768px) {
     #header .logo {
@@ -20,11 +23,7 @@
 }
 
 
-/* General Reset for all a tags to remove underline */
-a {
-    text-decoration: none;
-    border-bottom: none; /* Remove any bottom border */
-}
+
 
 /* Additional styling to ensure no underline appears */
 .logo-social a,
@@ -32,69 +31,137 @@ a {
     text-decoration: none;
     border-bottom: none;
 }
+/*----------------------------*/
+/* Footer */
+.footer-social {
+    text-align: center;
+    padding: 2em 0;
+    margin-top: -1em;
+}
 
-.logo-social {
+.footer-social .logo {
+    margin-bottom: 1.5em;
+}
+
+.footer-social .logo img {
+    height: 140px;
+    width: auto;
+}
+
+.footer-social .icons {
     display: flex;
-    align-items: center;
-    padding: 0 1em; /* Add some padding for better spacing */
-}
-
-.logo {
-    margin-right: 1em;
-}
-
-.logo-image {
-    height: 45px; /* Adjust the height as needed */
-    width: auto; /* Maintain aspect ratio */
-}
-
-.icons {
-    display: flex;
+    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    align-items: center; /* Align items vertically */
 }
 
-.icons li {
-    margin: 0 0.3em; /* Reduce the margin between the icons */
+.footer-social .icons li {
+    margin: 0 1em;
 }
 
-.social-icon-link {
+.footer-social .social-icon-link {
     display: inline-block;
-    text-decoration: none; /* Ensure no underline */
+    text-decoration: none;
+}
+
+.footer-social .social-icon {
+    height: 60px;
+    width: 60px;
+    display: block;
+    vertical-align: middle;
+}
+
+.footer-social .social-icon:hover {
+    filter: brightness(0.8);
+}
+
+.logo-image:hover {
+    filter: brightness(0.8);
+}
+
+#footer {
+    width: 100%;
+    position: relative;
+    background-color: #1c1d26; /* Ensure the footer has a background color */
+    color: #fff;
+    padding: 2em 0; /* Padding to give some space inside the footer */
+    text-align: center;
+}
+
+/* General settings for the logo and social icons */
+.logo-image {
+    height: auto;
+    width: 140px; /* Default size */
+    transition: all 0.3s ease-in-out;
 }
 
 .social-icon {
-    height: 25px;
-    width: 25px;
-    display: block; /* Ensure it behaves like a block element */
-    vertical-align: middle; /* Vertically center the icons */
+    height: 60px; /* Default size */
+    width: 60px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Ensure the logo is displayed in the titleBar on smaller screens */
-#titleBar .title a {
-    display: inline-block;
-    text-decoration: none; /* Ensure no underline */
+/* Responsive design for larger screens */
+@media screen and (min-width: 1200px) {
+    .logo-image {
+        width: 200px; /* Increase size for larger screens */
+    }
+
+    .social-icon {
+        height: 80px; /* Increase size for larger screens */
+        width: 80px;
+    }
 }
 
-#titleBar .logo-image {
-    height: 30px; /* Adjust as needed for smaller screens */
-    width: auto;
-    vertical-align: middle; /* Vertically center the logo */
+/* Responsive design for medium screens */
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+    .logo-image {
+        width: 160px; /* Adjust size for medium screens */
+    }
+
+    .social-icon {
+        height: 70px; /* Adjust size for medium screens */
+        width: 70px;
+    }
 }
 
-/* Add hover effects */
-.logo-image:hover {
-    filter: brightness(0.5); /* Darken the image slightly on hover */
+/* Responsive design for smaller screens */
+@media screen and (max-width: 767px) {
+    .logo-image {
+        width: 120px; /* Decrease size for smaller screens */
+    }
+
+    .social-icon {
+        height: 50px; /* Decrease size for smaller screens */
+        width: 50px;
+    }
 }
 
-.social-icon:hover {
-    filter: brightness(0.5); /* Darken the icon slightly on hover */
+/* Responsive design for very small screens */
+@media screen and (max-width: 480px) {
+    .logo-image {
+        width: 100px; /* Decrease size for very small screens */
+    }
+
+    .social-icon {
+        height: 40px; /* Decrease size for very small screens */
+        width: 40px;
+    }
 }
 
-/* -------------------------------------------------------------- */
-/* --------Content style----------- */
+/* Style the logo to look like a button */
+#scrollToTopLogo {
+    cursor: pointer; /* Change cursor to pointer */
+    transition: transform 0.3s ease; /* Smooth transformation */
+}
+
+#scrollToTopLogo:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+/* --------Content style of home page----------- */
 #one {
     display: flex;
     justify-content: center; /* Horizontally center */
@@ -111,13 +178,13 @@ a {
 }
 
 #one .content {
-    max-width: 1200px; /* Optional: Set a max-width for better readability */
+    max-width: 1500px; /* Optional: Set a max-width for better readability */
 	margin: 0 auto;          /* Center the content */
 	padding: 0;              /* Remove padding */
     font-family: 0, sans-serif; /* Set font style */
-    font-size: 16px;         /* Set font size */
+    font-size: 24px;         /* Set font size */
     line-height: 1.5;        /* Set line height to reduce spacing */
-    font-weight: 400;        /* Set font weight */
+    font-weight: 450;        /* Set font weight */
 	
 }
 
@@ -130,22 +197,9 @@ a {
     margin-bottom: 1.2em; /* Add some spacing between list items */
 }
 
-/* --------Content style for about.html----------- */
-#main .box {
-    text-align: justify;     /* Justify text alignment for box content */
-    max-width: 1250px;        /* Optional: Set a max-width for better readability */
-    margin: 0 auto;          /* Center the content */
-    font-family: 'Arial', sans-serif; /* Set font style */
-    font-size: 14px;         /* Set font size */
-    line-height: 1.5;        /* Set line height to reduce spacing */
-    font-weight: 400;        /* Set font weight */
-}
 
-#main .box p {
-    text-align: justify;     /* Ensure all paragraphs are justified */
-}
-
-
+/* ----------------------About Page-------------------------------- */
+/* ------Top and Footer page settings for About and others----- */
 html, body {
     height: 100%;
     margin: 0;
@@ -153,14 +207,214 @@ html, body {
 }
 
 #page-wrapper {
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
 }
-
-/* ----------------Top and Footer page settings */
+/*--- Main footer ----- */
 #main {
     flex: 1;
+}
+
+/* Footer styling for About page */
+.about-page #footer {
+	background-color: #1c1d26; /* New background color for the about page footer */
+    
+}
+
+/*--- Cover picture----- */
+#about-cover {
+    background-image: url('../../images/mycoverPic.png'); /* Make sure to replace 'cover.jpg' with your actual image path */
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    height: 40vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 21;
+    transition: background 2s ease-in-out; /* Added transition */
+    padding-top: 2em; /* Adjust padding to align vertically */
+    padding-bottom: 2em; /* Adjust padding to align vertically */
+}
+
+#about-cover .cover-content {
+    z-index: 22;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+	line-height: 2;        /* Set line height to reduce spacing */
+}
+
+#about-cover h3 {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    text-align: left;
+    margin: 0;
+}
+
+#about-cover p {
+    font-size: 1.2em;
+    text-align: left;
+    margin: 0.5em 0 0 0;
+}
+
+/* -----------Buttons Contents Section in About page -------------*/
+#contents-section {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(2, 20, 33, 0.85);
+    z-index: 1000;
+    padding: 10px 20px;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    border-radius: 10px; /* Optional: To make the corners rounded */
+}
+
+#contents-section ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#contents-section ul li {
+    margin: 0 15px;
+}
+
+#contents-section ul li a {
+    color: #edf0f0;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0px 20px;
+    border: 1px solid #0e757e;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+	font-weight: 100;
+}
+
+#contents-section ul li a:hover {
+    background-color: #081622;
+    color: #f0eeee;
+}
+
+/*-----Main Content in About page-------*/
+
+.about-page #main .container section h2 {
+    color: #26cede; /* Heading color */
+}
+
+/* Justify text in content sections */
+#main .container section {
+    text-align: justify;
+}
+
+
+/* Offset for the fixed contents section */
+#main {
+    margin-top: 60px;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 1024px) {
+    #contents-section ul li a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #contents-section ul li a {
+		font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #contents-section ul {
+        flex-direction: column;
+    }
+
+    #contents-section ul li {
+        margin: 5px 0;
+    }
+
+    #contents-section ul li a {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+/*-----------------------------*/
+
+.divider {
+    background: #177f88; /* Divider color */
+    height: 0.05em;
+    max-width: 500em;
+    width: 100%;
+    margin: 2em auto; /* Center the divider and add top margin */
+    display: block;
+}
+
+/*---------------Skills Style-------------------*/
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill-category {
+    width: 22%;
+    margin-bottom: 40px;
+}
+
+.skill {
+    margin-bottom: 10px;
+}
+
+.skill span {
+    font-weight: normal;
+}
+
+.bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    position: relative;
+}
+
+.bar-fill {
+    height: 100%;
+    background-color: #118c97;
+    border-radius: 5px;
+}
+
+.skill[data-level="1"] .bar-fill { width: 20%; }
+.skill[data-level="2"] .bar-fill { width: 40%; }
+.skill[data-level="3"] .bar-fill { width: 60%; }
+.skill[data-level="4"] .bar-fill { width: 80%; }
+.skill[data-level="5"] .bar-fill { width: 100%; }
+
+.skill[data-tooltip]:hover::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10; 
 }
 
 /* -------------------------------------------------------------- */
@@ -2337,19 +2591,20 @@ input, select, textarea {
 	}
 
 	header.major {
-		margin: 0 0 4em 0;
+		margin: 4em 0 0em 0;
 		position: relative;
 		text-align: center;
 	}
 
-		header.major:after {
-			background: #e44c65;
-			content: '';
-			display: inline-block;
-			height: 0.2em;
-			max-width: 20em;
-			width: 75%;
-		}
+	/*header.major:after {
+		background: #177f88;
+    	content: '';
+		display: inline-block;
+		height: 0.2em;
+		max-width: 20em;
+		width: 75%;
+		margin-top: 0.5em; 
+	} */
 
 	footer.major {
 		margin: 4em 0 0 0;
@@ -2412,7 +2667,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			border-color: #e44c65;
+			border-color: #1a5b77;
 		}
 
 	select {
@@ -3688,7 +3943,12 @@ input, select, textarea {
 	#footer {
 		background: #000b12;
 		padding: 40px 0;
-		text-align: center;
+		text-align: center; /* Center the text */
+		position: relative; /* Ensure it stays at the bottom */
+		bottom: 20; /* Position at the bottom */
+		width: 100%; /* Full width */
+		margin-top: auto; /* Push footer to the bottom */
+		padding-bottom: 5em;
 	}
 
 		#footer .icons .icon.alt {
@@ -3715,10 +3975,10 @@ input, select, textarea {
 
 		#footer .copyright {
 			color: rgba(255, 255, 255, 0.5);
-			font-size: 0.8em;
+			font-size: 0.85em;
 			line-height: 1em;
 			margin: 2em 0 0 0;
-			padding: 0;
+			padding: 5;
 			text-align: center;
 		}
 
@@ -4088,7 +4348,7 @@ input, select, textarea {
 						color: rgba(248, 246, 246, 0.979);
 						content: '\f0c9';
 						display: block;
-						font-size: 18px;
+						font-size: 22px;
 						height: 44px;
 						left: 0;
 						line-height: 44px;
@@ -4121,16 +4381,18 @@ input, select, textarea {
 				z-index: 10002;
 				background: #181920;
 				padding: 0.75em 1.25em;
+				
 			}
 
 				#navPanel .link {
 					border: 0;
 					border-top: solid 1px rgba(255, 255, 255, 0.05);
-					color: #26cede ;  /* Menu bar text color */
+					color: #13b0be ;  /* Menu bar text color */
 					display: block;
 					height: 3em;
 					line-height: 3em;
 					text-decoration: none;
+					
 				}
 
 					#navPanel .link:hover {

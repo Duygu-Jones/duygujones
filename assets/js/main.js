@@ -3,6 +3,27 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+/*-------------About me --Skills Bars-------- */
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const skillBars = document.querySelectorAll('.skill-bar');
+
+        skillBars.forEach(bar => {
+            bar.addEventListener('mouseenter', function() {
+                const level = this.getAttribute('data-level');
+                const levelText = this.getAttribute('data-level-text');
+                this.setAttribute('title', `${levelText}`);
+            });
+        });
+	});
+	
+/*-----------Scroll up Footer Logo ----------------- */
+/*Add custom script to handle the scroll to top functionality */
+    
+        document.getElementById('scrollToTopLogo').addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+	
+/*-------------------- */
 
 
 (function($) {
