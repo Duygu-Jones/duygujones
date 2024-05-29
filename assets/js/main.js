@@ -23,7 +23,11 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 	
-/*-------------------- */
+/*--------------------Icon ToolTips--------------- */
+
+/*--------------------------------- */
+
+
 
 
 (function($) {
@@ -64,28 +68,28 @@
 
 	//-------------------------------------- Nav.
 
-	// Title Bar.
-$(
-    '<div id="titleBar">' +
-        '<a href="#navPanel" class="toggle"></a>' +
-        '<span class="title">' +
-            '<a href="index.html">' +
-                '<img src="images/logo.png" alt="Duygu Jones Logo" class="logo-image" style="height: 30px; width: auto;" />' +
-            '</a>' +
-        '</span>' +
-    '</div>'
-).appendTo($body);
+	/*// Title Bar Logo (Cancelled).
+	$(
+		'<div id="titleBar">' +
+			'<a href="#navPanel" class="toggle"></a>' +
+			'<span class="title">' +
+				'<a href="index.html">' +
+					'<img src="images/logo.png" alt="Duygu Jones Logo" class="logo-image" style="height: 30px; width: auto;" />' +
+				'</a>' +
+			'</span>' +
+		'</div>'
+	).appendTo($body); */
 
-
-							/*// Title Bar.
-								$(
-									'<div id="titleBar">' +
-										'<a href="#navPanel" class="toggle"></a>' +
-										'<span class="title">' + $('#logo').html() + '</span>' +
-									'</div>'
-								)
-									.appendTo($body);
-							*/
+// Title Bar (Title org)-----------------------.
+	$(
+		'<div id="titleBar">' +
+			'<a href="#navPanel" class="toggle"></a>' +
+			'<span class="title">' + $('#logo').html() + '</span>' +
+					'</div>'
+	)
+	.appendTo($body);
+							
+							
 		// Panel.
 			$(
 				'<div id="navPanel">' +
