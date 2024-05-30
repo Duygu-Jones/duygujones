@@ -15,7 +15,7 @@
 }
 /* Logo Image Settings */
 .logo-image {
-    max-width: 120px; /* Adjust size as needed */
+    max-width: 110px; /* Adjust size as needed */
     height: auto;
     display: block;
     margin: 0 auto;
@@ -294,7 +294,7 @@ input, select, textarea {
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #26cede   ;
+		color: rgb(4, 119, 130)   ;  /*------------------------------------------>---Social icons color-----*/
 		text-decoration: none;
 	}
 
