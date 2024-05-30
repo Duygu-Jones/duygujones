@@ -3,7 +3,22 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
-/*-------------About me --Skills Bars-------- */
+
+//--Logo Scroll up settings---------------------
+document.getElementById('scrollToTopLogo').addEventListener('click', function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
+
+window.addEventListener('scroll', function() {
+    if (window.scrollY > 200) {
+        document.getElementById('scrollToTopLogo').classList.add('show');
+    } else {
+        document.getElementById('scrollToTopLogo').classList.remove('show');
+    }
+});
+
+
+/*-------------About --Skills Bars------for toolTips-not being used!!!!---------- */
     document.addEventListener('DOMContentLoaded', (event) => {
         const skillBars = document.querySelectorAll('.skill-bar');
 
@@ -15,20 +30,13 @@
             });
         });
 	});
-	
-/*-----------Scroll up Footer Logo ----------------- */
-/*Add custom script to handle the scroll to top functionality */
-    
-        document.getElementById('scrollToTopLogo').addEventListener('click', function() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-	
-/*--------------------Icon ToolTips--------------- */
-
-/*--------------------------------- */
+//------------------------------------------------------------------------------	
 
 
 
+
+
+//---------------------------------------------------------------------------
 
 (function($) {
 
@@ -66,30 +74,17 @@
 			hideDelay: 350
 		});
 
-	//-------------------------------------- Nav.
+	// Nav.
 
-	/*// Title Bar Logo (Cancelled).
-	$(
-		'<div id="titleBar">' +
-			'<a href="#navPanel" class="toggle"></a>' +
-			'<span class="title">' +
-				'<a href="index.html">' +
-					'<img src="images/logo.png" alt="Duygu Jones Logo" class="logo-image" style="height: 30px; width: auto;" />' +
-				'</a>' +
-			'</span>' +
-		'</div>'
-	).appendTo($body); */
+		// Title Bar.
+			$(
+				'<div id="titleBar">' +
+					'<a href="#navPanel" class="toggle"></a>' +
+					'<span class="title">' + $('#logo').html() + '</span>' +
+				'</div>'
+			)
+				.appendTo($body);
 
-// Title Bar (Title org)-----------------------.
-	$(
-		'<div id="titleBar">' +
-			'<a href="#navPanel" class="toggle"></a>' +
-			'<span class="title">' + $('#logo').html() + '</span>' +
-					'</div>'
-	)
-	.appendTo($body);
-							
-							
 		// Panel.
 			$(
 				'<div id="navPanel">' +
