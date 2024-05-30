@@ -2952,7 +2952,7 @@ input, select, textarea {
         flex-grow: 0 !important; /* Prevent growing */
         flex-shrink: 0 !important; /* Prevent shrinking */
         width: auto !important; /* Allow auto width */
-        padding: 0 0.5em; /* Adjust padding as needed */
+        padding: 0 0.4em; /* Adjust padding as needed */
     }
 
     ul.actions:not(.fixed) li > * {
@@ -2965,8 +2965,8 @@ input, select, textarea {
     ul.actions:not(.fixed) li button,
     ul.actions:not(.fixed) li .button {
         width: auto !important; /* Allow auto width */
-        padding: 0.5em 1em; /* Adjust padding for smaller screens */
-        font-size: 0.875em; /* Adjust font size for smaller screens */
+        padding: 0.1em 0.5em; /* Adjust padding for smaller screens */
+        font-size: 0.775em; /* Adjust font size for smaller screens */
     }
 
     ul.actions:not(.fixed) li input[type="submit"].icon:before,
