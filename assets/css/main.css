@@ -3730,10 +3730,17 @@ input, select, textarea {
 		height: 3.5em;
 		left: 0;
 		line-height: 3.5em;
-		position: fixed;
-		top: 0;
+		position: fixed;  /* Ensure the header stays at the top */
+		top: 0;           /* Align it to the top of the page */
 		width: 100%;
-		z-index: 100;
+		z-index: 100;     /* Make sure it stays above other elements */
+	}
+
+	/* Additional styles for the navigation links */
+	#header nav {
+		position: absolute;
+		right: 1em;
+		top: 0;
 	}
 
 		#header h1 {
@@ -3743,16 +3750,15 @@ input, select, textarea {
 			margin: 0;
 			position: absolute;
 			top: 0;
+			font-size: medium;  /* logo Duygu Jones home link (title bar) */
 		}
 
-		#header nav {
-			position: absolute;
-			right: 1em;
-			top: 0;
-		}
+		
 
 			#header nav ul {
 				margin: 0;
+				
+				
 			}
 
 				#header nav ul li {
@@ -3767,6 +3773,9 @@ input, select, textarea {
 						height: inherit;
 						line-height: inherit;
 						outline: 0;
+						font-weight: 500;
+						
+						
 					}
 
 						#header nav ul li a.button, #header nav ul li span.button {
@@ -3787,6 +3796,7 @@ input, select, textarea {
 						display: none;
 					}
 
+
 	body.landing #page-wrapper {
 		padding-top: 0;
 	}
@@ -3797,7 +3807,70 @@ input, select, textarea {
 		position: absolute;
 	}
 
-/* Banner */
+	/*----------------*/
+	/* Header */
+body.landing #header {
+    background: rgba(1, 12, 19, 0.99);
+    box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.25);
+    cursor: default;
+    height: 3.5em;
+    left: 0;
+    line-height: 3.5em;
+    position: fixed;  /* Ensure the header stays at the top */
+    top: 0;           /* Align it to the top of the page */
+    width: 100%;
+    z-index: 100;     /* Make sure it stays above other elements */
+}
+
+/* Additional styles for the navigation links */
+body.landing #header nav {
+    position: absolute;
+    right: 1em;
+    top: 0;
+}
+
+body.landing #header nav ul {
+    margin: 0;
+    padding: 0; /* Ensure no extra padding or margin */
+}
+
+body.landing #header nav ul li {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+body.landing #header nav ul li a, 
+body.landing #header nav ul li span {
+    border: 0;
+    color: inherit;
+    display: inline-block;
+    height: inherit;
+    line-height: inherit;
+    outline: 0;
+}
+
+body.landing #header nav ul li a.button, 
+body.landing #header nav ul li span.button {
+    height: 2em;
+    line-height: 2em;
+    padding: 0 1.25em;
+}
+
+body.landing #header nav ul li a:not(.button):before, 
+body.landing #header nav ul li span:not(.button):before {
+    margin-right: 0.5em;
+}
+
+body.landing #header nav ul li.active > a, 
+body.landing #header nav ul li.active > span {
+    color: #26cede;
+}
+
+body.landing #header nav ul li > ul {
+    display: none;
+}
+
+/* -------------------Banner --------------------*/
 
 	#banner {
 		background-attachment: fixed;
