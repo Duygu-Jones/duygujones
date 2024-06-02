@@ -62,7 +62,7 @@
 
 /*--- Cover picture----- */
 #about-cover {
-    background-image: url('../../images/mycoverPic.png'); /* Make sure to replace 'cover.jpg' with your actual image path */
+    background-image: url('../../images/my_banner_covers/mycoverPic.png'); /* Make sure to replace 'cover.jpg' with your actual image path */
     background-color: rgba(0, 0, 0, 0.5); /* Transparent black */
     background-attachment: fixed;
     background-position: center center;
@@ -102,6 +102,20 @@
     margin: 0.5em 0 0 0;
 }
 
+/*---------------Certificates pics-------------------*/
+.certificate-img {
+    display: none;
+    position: absolute;
+    max-width: 900px;
+    z-index: 10;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure this part is already in your main.css */
+.certificate-link {
+    position: relative;
+}
+
 
 
 /*---------------Skills Style-------------------*/
@@ -113,7 +127,7 @@
 }
 
 .skill-category {
-    width: 22%;
+    width: 22%; /* Default: 4 columns on large screens */
     margin-bottom: 40px;
 }
 
@@ -174,7 +188,7 @@
 
 @media (max-width: 992px) {
     .skill-category {
-        width: 45%;
+        width: 30%;  /* 2 columns */
     }
     .skill span {
         font-size: 0.85em;
@@ -186,7 +200,7 @@
 
 @media (max-width: 768px) {
     .skill-category {
-        width: 48%;
+        width: 48%; /* 2 columns */
     }
     .skill span {
         font-size: 0.8em;
@@ -198,7 +212,7 @@
 
 @media (max-width: 576px) {
     .skill-category {
-        width: 48%;
+        width: 48%; /* 1 column */
     }
     .skill span {
         font-size: 0.75em;
@@ -3875,7 +3889,7 @@ body.landing #header nav ul li > ul {
 	#banner {
 		background-attachment: fixed;
 		background-color: rgba(0, 0, 0, 0.9); /* Transparent black */
-		background-image: url("../../images/mybanner1.png");
+		background-image: url("../../images/my_banner_covers/mybanner1.png");
 		background-position: center center;
 		background-size: cover;
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);

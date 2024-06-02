@@ -32,6 +32,31 @@ window.addEventListener('scroll', function() {
 	});
 //------------------------------------------------------------------------------	
 
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.certificate-link').forEach(link => {
+        link.addEventListener('mouseover', function() {
+            const imgSrc = this.getAttribute('data-img-src');
+            let img = document.querySelector('.certificate-img');
+            if (!img) {
+                img = document.createElement('img');
+                img.className = 'certificate-img';
+                document.body.appendChild(img);
+            }
+            img.src = imgSrc;
+            img.style.display = 'block';
+            const rect = this.getBoundingClientRect();
+            img.style.top = `${rect.bottom + window.scrollY}px`;
+            img.style.left = `${rect.left + window.scrollX}px`;
+        });
+
+        link.addEventListener('mouseout', function() {
+            const img = document.querySelector('.certificate-img');
+            if (img) {
+                img.style.display = 'none';
+            }
+        });
+    });
+});
 
 
 
