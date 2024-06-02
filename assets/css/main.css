@@ -276,60 +276,34 @@
 @media (min-width: 1200px) {
     .project-item {
         width: calc(25% - 25px); /* 4 items per row */
-    }
-    .project-description h4 {
-        font-size: 24px;
-    }
-    .project-description p {
-        font-size: 16px;
+		
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .project-item {
         width: calc(25% - 25px); /* 4 items per row */
-    }
-    .project-description h4 {
-        font-size: 22px;
-    }
-    .project-description p {
-        font-size: 15px;
+		line-height: 1.5; /* Adjusted line height */
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
     .project-item {
         width: calc(33.33% - 25px); /* 3 items per row */
-    }
-    .project-description h4 {
-        font-size: 20px;
-    }
-    .project-description p {
-        font-size: 14px;
+		line-height: 1.5; /* Adjusted line height */
     }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
     .project-item {
         width: calc(50% - 25px); /* 2 items per row */
-    }
-    .project-description h4 {
-        font-size: 18px;
-    }
-    .project-description p {
-        font-size: 13px;
+		line-height: 1.5; /* Adjusted line height */
     }
 }
 
 @media (max-width: 575px) {
     .project-item {
         width: 100%; /* 1 item per row */
-    }
-    .project-description h4 {
-        font-size: 16px;
-    }
-    .project-description p {
-        font-size: 12px;
     }
 }
 
