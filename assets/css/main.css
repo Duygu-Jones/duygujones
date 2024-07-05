@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
 
 
+
 /* Footer Logo Container */
 #footer .logo {
     margin-bottom: 1.5em; 
@@ -3061,7 +3062,7 @@ input, select, textarea {
 		}
 */
 
-/* Ensure buttons remain in a row and get smaller on small screens */
+/*------------------ Ensure buttons remain in a row and get smaller on small screens ----------------------*/
 @media screen and (max-width: 480px) {
     ul.actions:not(.fixed) {
         flex-direction: row !important; /* Ensure row direction */
